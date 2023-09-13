@@ -45,10 +45,6 @@ describe("Todo", () => {
     test("task should change style after clicking", async () => {
         render(<MockTodo />)
         addTask(['111'])
-        // const inputElement = screen.getByPlaceholderText(/Add a new task here.../i);
-        // const buttonElement = screen.getByText(/Add/i);
-        // fireEvent.change(inputElement, {target: {value: "111"}});
-        // fireEvent.click(buttonElement);
         const oneTask = screen.getByText("111");
         fireEvent.click(oneTask);
         expect(oneTask).toHaveClass("todo-item-active");
