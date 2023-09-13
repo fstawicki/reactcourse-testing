@@ -7,7 +7,6 @@ export default function Header({
     return (
         <>
         <h1 title='header-h1' className="header">{title}</h1>
-        <h3 className="header">ddd</h3>
         </>
     )
 }
