@@ -17,6 +17,7 @@ describe("Followers list", () => {
     test("follower should appear in container", async () => {
         render(<MockFollowersList />);
         const followerCard = await screen.findByTestId("follower-item-0");
+        screen.debug()
         expect(followerCard).toBeInTheDocument();
 
     })

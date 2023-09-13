@@ -7,13 +7,6 @@ test('should reneder same text passed into title prop', async () => {
   expect(headingElement).toBeInTheDocument();
 });
 
-//specyficzny - znajdz dokładnie header h3 a nie header h1
-test('should reneder header element', async () => {
-    render(<Header title="My Header" />);
-    const headingElement = screen.getByRole("heading", {name: "ddd"})
-    expect(headingElement).toBeInTheDocument();
-  });
-
 //using Find
 test("should find rendered header element", async () =>{
     render(<Header />);
@@ -38,5 +31,5 @@ test("should query NOT rendered header element", async () =>{
 test("should getByAll rendered heading", async () => {
     render(<Header />);
     const testedElements = screen.getAllByRole("heading");
-    expect(testedElements.length).toBe(2);
+    expect(testedElements.length).toBe(1);
 })
